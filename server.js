@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 
 //Crud Regestration
 
-
 var app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
@@ -14,7 +13,7 @@ app.use(bodyParser.json());
 
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-var dbHost = "mongodb://localhost:27017/NS"
+var dbHost = "mongodb://localhost:27017/TL"
 mongoose.connect(dbHost);
 
 var db = mongoose.connection;
@@ -39,5 +38,5 @@ if (app.get('env') === 'development') {
 }
 
 var server = app.listen(2353, function () {
-    console.log('Server is running on port 1090');
+    console.log('Server is running on port 2353');
 });
