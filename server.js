@@ -1,7 +1,8 @@
 var express = require('express');
 var logger = require('morgan');
-
+var io=require('socket.io');
 var bodyParser = require('body-parser');
+var multer=require('multer');
 
 //Crud Regestration
 
