@@ -1,10 +1,12 @@
 var express = require('express');
 var logger = require('morgan');
-var io=require('socket.io');
-var bodyParser = require('body-parser');
 var multer=require('multer');
+var bodyParser = require('body-parser');
+var io=require('socket.io');
 
 //Crud Regestration
+var Hotels=require('./cruds/hotelCrud');
+var Tickets=require('./cruds/TicketsCrud');
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
